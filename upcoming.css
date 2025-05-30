@@ -1,0 +1,283 @@
+body {
+    padding: 30px;
+    background: linear-gradient(to right, #EEEEEE, #C9D6FF);
+    font-family: 'Poppins', Arial, sans-serif;
+    color: #222831;
+}
+
+h1 {
+    text-align: center;
+    color: #222831;
+}
+
+.event {
+    border: 1px solid #393E46;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 15px 0;
+    background-color: #FFFFFF;
+    color: #222831;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.event:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.event h2 {
+    margin-top: 0;
+    color: #393E46;
+}
+
+.event ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.event ul li {
+    background: #f3f3f3;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.delete-btn {
+    background-color: #FF5722;
+    color: #FFFFFF;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+    margin-right: 10px;
+}
+
+.delete-btn:hover {
+    background-color: #FF7043;
+    transform: scale(1.05);
+}
+
+.edit-btn {
+    background-color: #00ADB5;
+    color: #FFFFFF;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.edit-btn:hover {
+    background-color: #02C0C9;
+    transform: scale(1.05);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    animation: fadeIn 0.5s;
+}
+
+.modal-content {
+    background-color: #FFFFFF;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    border-radius: 10px;
+    width: 80%;
+    animation: slideIn 0.5s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-20px); }
+    to { transform: translateY(0); }
+}
+
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #393E46;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.add-btn, .btn, .remove-btn {
+    background-color: #00ADB5;
+    color: #FFFFFF;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+    margin-top: 10px;
+}
+
+.add-btn:hover, .btn:hover, .remove-btn:hover {
+    background-color: #02C0C9;
+    transform: scale(1.05);
+}
+
+.form-group > div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.form-group > div > input {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.styled-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 18px;
+    text-align: left;
+}
+
+.styled-table th, .styled-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #dddddd;
+}
+
+.styled-table thead tr {
+    background-color: #393E46;
+    color: #FFFFFF;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.styled-table tbody tr:hover {
+    background-color: #f5f5f5;
+}
+
+.modal-content .add-btn {
+    background-color: #00ADB5;
+}
+
+.modal-content .add-btn:hover {
+    background-color: #02C0C9;
+}
+
+.modal-content .remove-btn {
+    background-color: #FF5722;
+}
+
+.modal-content .remove-btn:hover {
+    background-color: #FF7043;
+}
+
+.modal-content .btn {
+    background-color: #393E46;
+    color: #FFFFFF;
+}
+
+.modal-content .btn:hover {
+    background-color: #222831;
+}
+
+.modal-content input[type="text"],
+.modal-content input[type="date"],
+.modal-content input[type="time"],
+.modal-content input[type="number"],
+.modal-content textarea {
+    border: none;
+    padding: 8px;
+    background-color: #F6F6F6;
+    margin-bottom: 10px;
+}
+
+.modal-content input[type="text"]:focus,
+.modal-content input[type="date"]:focus,
+.modal-content input[type="time"]:focus,
+.modal-content input[type="number"]:focus,
+.modal-content textarea:focus {
+    outline: none;
+}
+
+.generate-invite-btn {
+    background-color: #00ADB5;
+    color: #FFFFFF;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+    margin-right: 10px;
+}
+
+.generate-invite-btn:hover {
+    background-color: #02C0C9;
+    transform: scale(1.05);
+}
+
+#generatedInvite {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#inviteText {
+    background-color: #f3f3f3;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 5px;
+    white-space: pre-wrap;
+}
+
+.copy-btn {
+    background-color: #00ADB5;
+    color: #FFFFFF;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.copy-btn:hover {
+    background-color: #02C0C9;
+    transform: scale(1.05);
+}

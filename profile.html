@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="profile.css">
+    <script type="module" src="./profile.js"></script>
+</head>
+<body>
+    <div id="navbar-container"></div>
+    <h1>Profile Information</h1>
+    <div>First Name: <span id="profileUserFName"></span></div>
+    <div>Last Name: <span id="profileUserLName"></span></div>
+    <div>Email: <span id="profileUserEmail"></span></div>
+    <button id="logout">Logout</button>
+    <button id="deleteAccount">Delete Account</button>
+</body>
+<script>
+    // Load the navbar
+    fetch('navbar.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('navbar-container').innerHTML = data;
+        });
+</script>
+</html>

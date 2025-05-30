@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="home.css">
+    <script type="module" src="./home.js"></script>
+</head>
+<body>
+    <div id="navbar-container"></div>
+    <div class="main-section">
+        <div class="main-content">
+            <h1>EventFlow</h1>
+            <p class="tagline">Where Every Detail Finds Its Place</p>
+        </div>
+    </div>
+
+    <section class="about-section">
+        <h2>About</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <p>Welcome to EventFlow, your ultimate companion for seamless event planning and management. At EventFlow, we understand that every event is unique, and our platform is designed to empower you with the tools and intelligence to bring your vision to life.</p>
+            </div>
+            <div class="about-image">
+                <img src="Images/aboutimg.jpg" alt="About Us">
+            </div>
+        </div>
+    </section>
+
+    <section class="offer-section">
+        <h2>What We Offer</h2>
+        <ul>
+            <li><strong>Effortless Event Creation:</strong> Easily create detailed event plans by adding essential details such as event name, location, date, time, and venue.</li>
+            <li><strong>Comprehensive Scheduling:</strong> Plan your event schedule with precision, ensuring every aspect runs smoothly.</li>
+            <li><strong>Item Checklist:</strong> Keep track of necessary items with our intuitive checklist feature, ensuring nothing essential is overlooked.</li>
+            <li><strong>Funding Log:</strong> Manage finances effectively with our funding log, tracking expenses and contributions transparently.</li>
+            <li><strong>Guest List Management:</strong> Maintain and organize your guest list effortlessly, ensuring smooth communication and coordination.</li>
+        </ul>
+    </section>
+
+    <section class="ai-email-section">
+        <h2>AI-Powered Email Generation</h2>
+        <p>EventFlow leverages cutting-edge AI technology to streamline communication. Our AI-powered email generation feature helps you effortlessly create and send personalized emails to attendees, sponsors, and stakeholders, ensuring effective engagement and coordination.</p>
+    </section>
+
+    <section class="mission-section">
+        <h2>Our Mission</h2>
+        <p>At EventFlow, we are dedicated to simplifying the complexities of event planning. Whether you're organizing a corporate conference, wedding, or community event, our platform equips you with the tools and insights to execute your vision flawlessly. We are committed to enhancing your event planning experience, ensuring efficiency, creativity, and success.</p>
+    </section>
+
+    <section class="get-started-section">
+        <h2>Get Started Today</h2>
+        <p>Join thousands of event planners who trust EventFlow to manage their events efficiently. Sign up today and experience the future of event planning firsthand.</p>
+        <button>Sign Up Now</button>
+    </section>
+
+    <div class="copyright-section">
+        <p>&copy; 2024 EventFlow. All rights reserved.</p>
+    </div>
+</body>
+<script>
+    // Load the navbar
+    fetch('navbar.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('navbar-container').innerHTML = data;
+        });
+</script>
+</html>

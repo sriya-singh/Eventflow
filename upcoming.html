@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upcoming Events</title>
+    <link rel="stylesheet" href="upcoming.css">
+    <script type="module" src="./upcoming.js"></script>
+    <script type="importmap">
+      {
+        "imports": {
+          "@google/generative-ai": "https://esm.run/@google/generative-ai"
+        }
+      }
+    </script>
+</head>
+<body>
+    <div id="navbar-container"></div>
+    <h1>Upcoming Events</h1>
+    <div id="events-container"></div>
+
+    <!-- Edit Event Modal -->
+    <div id="edit-event-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeEditModal()">&times;</span>
+            <h1>Edit Event</h1>
+            <form id="editEventForm">
+                <!-- Form fields similar to createNew.html -->
+            </form>
+        </div>
+    </div>
+
+    <!-- Generate Invite Modal -->
+    <div id="generate-invite-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeGenerateInviteModal()">&times;</span>
+            <h1>Generate Invite</h1>
+            <form id="generateInviteForm">
+                <div class="form-group">
+                    <label for="guestSelect">Select Recipient</label>
+                    <select id="guestSelect" required>
+                        <option value="all">All</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn">Generate Invite</button>
+            </form>
+            <div id="generatedInvite" style="display: none;">
+                <h2>Generated Invite</h2>
+                <p id="inviteText"></p>
+                <button class="btn" onclick="copyInvite()">Copy Invite</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Load the navbar
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar-container').innerHTML = data;
+            });
+    </script>
+</body>
+</html>

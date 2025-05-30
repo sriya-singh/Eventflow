@@ -1,0 +1,93 @@
+/* profile.css */
+
+/* General Body Styling */
+body {
+    padding: 50px;
+    background: linear-gradient(to right, #e2e2e2, #c9d6ff);
+}
+
+/* Header Styling */
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2rem; /* Font size adjusted */
+    color: #222831;
+}
+
+/* Navbar Styling */
+nav {
+    background-color: #393E46;
+    overflow: hidden;
+}
+
+nav a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #00ADB5;
+    color: black;
+}
+
+/* Button Styling */
+button {
+    color: #EEEEEE;
+    background-color: #393E46;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem; /* Font size adjusted */
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #00ADB5;
+    color: #222831;
+    transform: translateY(-2px);
+}
+
+/* Logout Button Specific Styling */
+#logout {
+    background-color: #EE6C4D; /* Different color for logout button */
+    margin-right: 10px; /* Added margin for spacing */
+}
+
+#logout:hover {
+    background-color: #F0816C; /* Lighter color on hover */
+}
+
+/* Delete Button Specific Styling */
+#deleteAccount {
+    background-color: #393E46; /* Same background as navbar */
+    color: #EEEEEE;
+}
+
+#deleteAccount:hover {
+    background-color: #222831; /* Darker color on hover */
+}
+
+/* Content Styling */
+button, div {
+    margin-left: 15%;
+    font-size: 1rem; /* Adjusted to match button font size */
+    padding: 15px;
+}
+
+div {
+    font-weight: 400;
+    color: #222831;
+}
+
+span {
+    font-weight: 600;
+    font-size: 1rem; /* Adjusted to match button font size */
+    color: #393E46;
+}

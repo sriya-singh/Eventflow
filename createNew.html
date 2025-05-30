@@ -1,0 +1,105 @@
+<!-- createNew.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create New Event</title>
+    <link rel="stylesheet" href="createNew.css">
+</head>
+<body>
+    <div id="navbar-container"></div>
+    <h1>Create New Event</h1>
+    <form id="eventForm">
+        <div class="form-group">
+            <label for="eventName">Event Name</label>
+            <input type="text" id="eventName" required>
+        </div>
+        <div class="form-group">
+            <label for="eventDescription">Description</label>
+            <textarea id="eventDescription" rows="4" required></textarea>
+        </div>        
+        <div class="form-group">
+            <label for="eventDate">Date</label>
+            <input type="date" id="eventDate" required>
+        </div>
+        <div class="form-group">
+            <label for="eventTime">Time</label>
+            <input type="time" id="eventTime" required>
+        </div>
+        <div class="form-group">
+            <label for="eventVenue">Venue</label>
+            <input type="text" id="eventVenue" required>
+        </div>
+        <div class="form-group">
+            <label>Guests</label>
+            <div id="guests">
+                <div>
+                    <input type="text" placeholder="Guest Name" class="guestName">
+                    <input type="text" placeholder="Contact Info" class="guestContact">
+                    <button type="button" class="remove-btn" onclick="removeGuest(this)">Remove</button>
+                </div>
+            </div>
+            <button type="button" class="add-btn" id="addGuest">Add Guest</button>
+        </div>
+        <div class="form-group">
+            <label>Schedule</label>
+            <div id="schedule">
+                <div>
+                    <input type="text" placeholder="Sub Event Name" class="subEventName">
+                    <input type="time" class="subEventTime">
+                    <button type="button" class="remove-btn" onclick="removeSchedule(this)">Remove</button>
+                </div>
+            </div>
+            <button type="button" class="add-btn" id="addSchedule">Add Sub Event</button>
+        </div>
+        <div class="form-group">
+            <label>Items</label>
+            <div id="items">
+                <div>
+                    <input type="text" placeholder="Item Name" class="itemName">
+                    <button type="button" class="remove-btn" onclick="removeItem(this)">Remove</button>
+                </div>
+            </div>
+            <button type="button" class="add-btn" id="addItem">Add Item</button>
+        </div>
+        <div class="form-group">
+            <label>Funding Log</label>
+            <div id="fundingLog">
+                <div>
+                    <input type="text" placeholder="Description" class="fundingDescription">
+                    <input type="number" placeholder="Amount" class="fundingAmount">
+                    <button type="button" class="remove-btn" onclick="removeFunding(this)">Remove</button>
+                </div>
+            </div>
+            <button type="button" class="add-btn" id="addFunding">Add Funding Log</button>
+        </div>
+        <button type="submit" class="btn">Create Event</button>
+    </form>
+    <script type="module" src="./createNew.js"></script>
+    <script>
+        // Load the navbar
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar-container').innerHTML = data;
+            });
+
+        function removeGuest(element) {
+            element.parentElement.remove();
+        }
+
+        function removeSchedule(element) {
+            element.parentElement.remove();
+        }
+
+        function removeItem(element) {
+            element.parentElement.remove();
+        }
+
+        function removeFunding(element) {
+            element.parentElement.remove();
+        }
+    </script>
+</body>
+</html>
